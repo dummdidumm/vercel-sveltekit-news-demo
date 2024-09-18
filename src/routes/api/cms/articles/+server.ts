@@ -11,7 +11,7 @@ export interface Article {
 	content: string;
 }
 
-const articles: Article[] = [
+const get_articles = (): Article[] => [
 	{
 		id: '1',
 		author: 'John Doe',
@@ -26,7 +26,15 @@ const articles: Article[] = [
 			'<br><br>' +
 			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '.repeat(
 				4
-			)
+			) +
+			'<br><br>' +
+			'Last updated at ' +
+			new Date().toLocaleTimeString(undefined, {
+				hour12: false,
+				hour: '2-digit',
+				minute: '2-digit',
+				second: '2-digit'
+			})
 	},
 	{
 		id: '2',
@@ -41,7 +49,15 @@ const articles: Article[] = [
 			'<br><br>' +
 			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '.repeat(
 				4
-			)
+			) +
+			'<br><br>' +
+			'Last updated at ' +
+			new Date().toLocaleTimeString(undefined, {
+				hour12: false,
+				hour: '2-digit',
+				minute: '2-digit',
+				second: '2-digit'
+			})
 	},
 	{
 		id: '3',
@@ -56,7 +72,15 @@ const articles: Article[] = [
 			'<br><br>' +
 			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '.repeat(
 				4
-			)
+			) +
+			'<br><br>' +
+			'Last updated at ' +
+			new Date().toLocaleTimeString(undefined, {
+				hour12: false,
+				hour: '2-digit',
+				minute: '2-digit',
+				second: '2-digit'
+			})
 	},
 	{
 		id: '4',
@@ -72,12 +96,20 @@ const articles: Article[] = [
 			'<br><br>' +
 			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '.repeat(
 				4
-			)
+			) +
+			'<br><br>' +
+			'Last updated at ' +
+			new Date().toLocaleTimeString(undefined, {
+				hour12: false,
+				hour: '2-digit',
+				minute: '2-digit',
+				second: '2-digit'
+			})
 	}
 ];
 
 export const GET: RequestHandler = async () => {
 	// Simulate some delay
 	await new Promise((resolve) => setTimeout(resolve, 50));
-	return json(articles);
+	return json(get_articles());
 };
