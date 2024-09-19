@@ -11,6 +11,7 @@ export interface Article {
 	content: string;
 }
 
+// In real world you would get this from a CMS
 const get_articles = (): Article[] => [
 	{
 		id: '1',

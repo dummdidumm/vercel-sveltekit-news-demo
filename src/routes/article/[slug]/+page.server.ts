@@ -1,10 +1,11 @@
 import type { PageServerLoad } from './$types';
 import type { Article } from '../../api/cms/articles/+server';
+import { _token } from '../../api/cms/refresh/+server';
 
 export const config = {
 	isr: {
 		expiration: 180,
-		bypassToken: 'REFRESH_ARTICLES_BYPASS_TOKENNNN'
+		bypassToken: _token
 	}
 };
 
