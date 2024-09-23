@@ -30,11 +30,11 @@
 	/>
 </svelte:head>
 
-<div class="min-h-screen bg-[#fafafa] flex flex-col">
+<div class="flex min-h-screen flex-col bg-[#fafafa]">
 	<header class="border-b border-[#eaeaea] bg-white">
-		<nav class="max-w-[1024px] mx-auto px-6 py-4 flex justify-between items-center">
+		<nav class="mx-auto flex max-w-[1024px] items-center justify-between px-6 py-4">
 			<div class="flex items-center space-x-6">
-				<a href="/" class="font-semibold text-xl">Vercel News</a>
+				<a href="/" class="text-xl font-semibold">Vercel News</a>
 				<a href="/" class="text-sm text-gray-600 hover:text-black">Home</a>
 				<a href="/about" class="text-sm text-gray-600 hover:text-black">About</a>
 			</div>
@@ -42,16 +42,16 @@
 		</nav>
 	</header>
 
-	<main class="flex-grow max-w-[1024px] mx-auto px-6 py-8">
+	<main class="mx-auto max-w-[1024px] flex-grow px-6 py-8">
 		{@render children()}
 	</main>
 
 	<footer class="border-t border-[#eaeaea] bg-white">
-		<div class="max-w-[1024px] mx-auto px-6 py-8 flex justify-between items-center">
+		<div class="mx-auto flex max-w-[1024px] items-center justify-between px-6 py-8">
 			<div class="text-sm text-gray-600">© 2023 Vercel News. All rights reserved.</div>
 			<div class="flex space-x-6">
-				<a href="/privacy" class="text-sm text-gray-600 hover:text-black">Privacy Policy</a>
-				<a href="/terms" class="text-sm text-gray-600 hover:text-black">Terms of Service</a>
+				<a href="/" class="text-sm text-gray-600 hover:text-black">Privacy Policy</a>
+				<a href="/" class="text-sm text-gray-600 hover:text-black">Terms of Service</a>
 			</div>
 		</div>
 	</footer>
