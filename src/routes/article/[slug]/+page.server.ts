@@ -10,6 +10,7 @@ export const config = {
 };
 
 export const load: PageServerLoad = async ({ fetch, params }) => {
+	// In real world you'd have an extra endpoint for a single article
 	const articles = await fetch('/api/cms/articles').then(
 		(response) => response.json() as Promise<Article[]>
 	);
