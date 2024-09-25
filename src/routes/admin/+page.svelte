@@ -1,6 +1,6 @@
 <script lang="ts">
-	let isLoading = false;
-	let message = '';
+	let isLoading = $state(false);
+	let message = $state('');
 
 	async function refreshData() {
 		isLoading = true;
@@ -28,7 +28,7 @@
 		<h1 class="mb-6 text-3xl font-bold md:text-4xl">Admin Dashboard</h1>
 		<div class="flex flex-col items-center justify-center space-y-4">
 			<button
-				on:click={refreshData}
+				onclick={refreshData}
 				disabled={isLoading}
 				class="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
 			>
