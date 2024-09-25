@@ -1,10 +1,10 @@
-# SvelteKit + Vercel News-Style Demo
+# SvelteKit + Vercel News Demo
 
 A SvelteKit "news" site running on Vercel. Showcasing the following features:
 
 - Rendering modes: `/about` page is prerendered, home page is server-side-rendered, `/admin` page is an SPA, articles use Vercel ISR
 - Articles are ISR'd, with the possibility to refresh their "Last updated" timestamp (i.e. regenerate the articles) using the hidden `/admin` page
-- Vercel Toolbar: Visible during local development and on preview deployments. Contains a flag for making the the headlines on the home page bigger
+- Vercel Toolbar: Visible during local development and on preview deployments. Contains a flag for making the headlines on the home page bigger
 
 Deployed to production at https://vercel-sveltekit-news-demo.vercel.app/
 
